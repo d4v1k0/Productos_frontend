@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+ 
+}
+
+:root {
+  --fontTexto:  'Poppins', sans-serif;
+  --fontHeading: 'Poppins', cursive;
+
+  /** Colores **/
+  --azul : #235ad4;
+  --rojo : #d12e2e;
+  --naranja : #F58549;
+  --amarillo: #ECA400;
+  --verde : #00b38f;
+
+  /** gris **/
+  --gris: #969696;
+  --grisOscuro : #707070;
+  --grisClaro: rgb(233, 233, 233);
+}
+body {
+  background-color: var(--grisClaro);
+  font-size: 1.6rem;
+  font-family: var(--fontTexto);
+}
+html {
+  
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+  font-family: var(--fontTexto);
+  text-decoration: none;
+}
+
+/** Formularios **/
+form {
+  width:95%;
+  max-width: 800px;
+  margin: 4rem auto 0 auto;
+}
+form legend {
+  font-size: 2.4rem;
+  color: var(--azul);
+  font-family: var(--fontTexto);
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+form .campo {
+  padding: .5rem 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+form .campo label {
+  font-weight: bold;
+  font-family: var(--fontTexto);
+  flex: 0 0 100px;
+}
+form .campo input:not([type="submit"]){
+  padding: 1.5rem;
+  flex: 1;
+  border: 1px solid #e1e1e1;
+}
+form .campo input[readonly] {
+  background-color: #e1e1e1;
+}
+.enviar {
+  padding: .5rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.resumen {
+  padding: 0;
+  margin: 1rem 6rem;
+}
+.resumen li {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.resumen li .texto-producto, 
+.resumen li .acciones  {
+  flex: 0 0 calc(50% - 2rem);
+}
+.resumen .acciones {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenedor-cantidad {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex:  0 0 100%;
+  margin-bottom: 2rem;
+}
+.contenedor-cantidad i {
+  flex: 0 0 4rem;
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-minus,
+.fa-plus {
+  color: white;
+}
+.fa-minus:hover,
+.fa-plus:hover {
+  cursor: pointer;
+}
+.contenedor-cantidad .fa-plus,
+.contenedor-cantidad .fa-minus  {
+  background-color: var(--azul);
+}
+.contenedor-cantidad input {
+  flex: 1;
+  padding: 1rem;
+}
+
+.pedido .total {
+  font-weight: 700;
+  color: var(--azul);
+  font-size: 2.4rem;
+}
+
+.total {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.total span {
+  color: var(--azul);
+}
+
+.resumen li .texto-producto, 
+.resumen li .acciones  {
+  flex: 0 0 calc(50% - 2rem);
+}
+
+.cliente p,
+.producto p,
+.pedido p {
+  margin: 2rem 0;
+}
+
+/** Mostrar Clientes **/
+.listado-clientes,
+.listado-productos,
+.listado-pedidos {
+  list-style: none;
+  padding: 0;
+}
+.cliente,
+.producto,
+.pedido,
+.resumen li {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--grisClaro);
+}
+.cliente:last-of-type,
+.producto:last-of-type, 
+.pedido:last-of-type{
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .cliente,
+  .producto,
+  .pedido {
+      display: flex;
+      justify-content: space-between;
+  }
+  .cliente .info-cliente,
+  .producto .info-producto,
+  .pedido .info-pedido {
+      flex: 0 0 calc(70% - 1rem);
+  }
+  .cliente .acciones,
+  .producto .acciones,
+  .pedido .acciones {
+      flex: 0 0 calc(30% - 1rem);
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  } 
+  
+  .pedido .acciones,
+  .producto .acciones  {
+      justify-content: flex-start;
+  }
+}
+.acciones form {
+  width: 100%;
+}
+.acciones .btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cliente .acciones a:last-of-type,
+  .producto .acciones a:last-of-type, 
+  .pedido .acciones a:last-of-type {
+      margin-bottom: 0;
+  } 
+}
+.cliente p,
+.producto p,
+.pedido p {
+  margin: 2rem 0;
+}
+.cliente .nombre,
+.producto .nombre,
+.pedido .id,
+.resumen .nombre {
+  font-size: 2.4rem;
+  color: var(--azul);
+}
+.cliente .empresa,
+.pedido .nombre, 
+.resumen .precio{
+  font-weight: 700;
+  font-size: 2rem;
+}
+.pedido .total {
+  font-weight: 700;
+  color: var(--azul);
+  font-size: 2.4rem;
+}
+.pedido .productos {
+  font-weight: 700;
+}
+.articulos-pedido {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+.pedido ul  {
+  list-style: none;
+  padding: 0;
+}
+.pedido ul li:first-of-type {
+  border-top: none;
+}
+.pedido ul li:last-of-type {
+  border-bottom: none;
+}
+.pedido ul li {
+  border-top: 1px solid #e1e1e1;
+}

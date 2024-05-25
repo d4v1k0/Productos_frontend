@@ -1,0 +1,51 @@
+/* Estilos para la tabla */
+.articulos-pedido table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.articulos-pedido th, .articulos-pedido td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilo para el encabezado de la tabla */
+.articulos-pedido th {
+  background-color: #f2f2f2;
+}
+
+/* Estilo para las filas impares */
+.articulos-pedido tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Estilo al pasar el ratón por encima de una fila */
+.articulos-pedido tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilo para la primera columna */
+.articulos-pedido tbody td:first-child {
+  font-weight: bold;
+}
+
+/* Alineación de la última columna */
+.articulos-pedido tbody td:last-child {
+  text-align: center;
+}
+
+@media( max-width : 800px ) {
+  .pedido {
+    display: initial;
+    width: 100%;
+  }
+  .btn {
+    width: 96%;
+    margin: 1rem;
+  }
+
+  .id-pedido {
+    font-size: 0.5rem;
+  }
+}

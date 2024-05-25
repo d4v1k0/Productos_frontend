@@ -1,0 +1,32 @@
+.fichaCliente {
+  width: 100%;
+ 
+}
+
+.fichaCliente table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid white;
+}  
+
+.fichaCliente caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fichaCliente td {
+  padding: 8px;
+}
+
+.fichaCliente td:first-child {
+  width: 30%;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+.cant-pro-centrar {
+  flex: 0 0 calc(38% - 2rem);
+}

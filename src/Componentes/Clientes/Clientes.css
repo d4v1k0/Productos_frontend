@@ -1,0 +1,29 @@
+.clients {
+  padding-left: 5rem;
+}
+
+.clients h2{
+  padding: 2rem 0;
+}
+
+.link-clients {
+  margin-bottom: 2rem;
+}
+
+@media( max-width : 800px ) {
+  .clients {
+    padding-left: 0.5rem;
+  }
+
+  .clients h2{
+    padding: 2rem 0;
+  }
+
+  .list-product {
+    box-sizing: border-box;
+    width: 98%;
+    height: 100%;
+}
+
+
+}
