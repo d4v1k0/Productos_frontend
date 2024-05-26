@@ -17,7 +17,7 @@ import Login from './Componentes/auth/Login'
 function App() {
 
 
-  // utilizar context en el componente
+  // utilizar context
   const [auth, setAuth] = useContext(NgContext);
 
   return (
