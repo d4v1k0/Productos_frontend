@@ -36,7 +36,7 @@ const Menubar = () => {
           <li><Link to="/" onClick={() => scrollToSection('sec2')}>Nosotros</Link></li>
           <li><Link to="/" onClick={() => scrollToSection('sec3')}>Productos</Link></li>
           <li><Link to="/" onClick={() => scrollToSection('sec4')}>Testimonios</Link></li>
-          <li><Link to="https://cdn.glitch.global/362a0e10-917d-4260-9315-6cfa19031e59/daxen_shopping.apk?v=1698178176764">App</Link></li>
+          <li><Link to="https://drive.google.com/file/d/1M3GzS_wD3GhtLWH4QTJ33-3ttK_UKzxV/view?usp=drive_link">App</Link></li>
 
         </ul>
 
